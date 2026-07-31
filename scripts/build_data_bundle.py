@@ -11,8 +11,7 @@ OUT = ROOT / "data-bundle.js"
 
 
 def load(name: str) -> dict:
-    path = DATA_DIR / name
-    with path.open("r", encoding="utf-8") as f:
+    with (DATA_DIR / name).open("r", encoding="utf-8") as f:
         return json.load(f)
 
 

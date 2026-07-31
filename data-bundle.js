@@ -190,7 +190,7 @@ window.PC_PROCUREMENT_DATA = {
         "specSummary": "TLC NAND, DRAM or proven HMB design, strong sustained performance",
         "tags": [
           "2tb",
-          "tLC",
+          "tlc",
           "value"
         ],
         "fitScore": 91,

@@ -36,10 +36,7 @@ def main() -> None:
 
     known = set(ids)
     for snapshot in snapshots.get("snapshots", []):
-        try:
-            date.fromisoformat(snapshot["date"])
-        except Exception as exc:  # noqa: BLE001
-            fail(f"Invalid snapshot date: {exc}")
+        date.fromisoformat(snapshot["date"])
         fx = snapshot.get("fx", {}).get("JPY_CNY")
         if not isinstance(fx, (int, float)) or fx <= 0:
             fail("Each snapshot requires a positive JPY_CNY rate")
