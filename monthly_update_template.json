@@ -1,0 +1,15 @@
+{
+  "upsertProducts": [],
+  "retireProductIds": [],
+  "snapshot": {
+    "date": "YYYY-MM-DD",
+    "fx": {
+      "JPY_CNY": 0.0,
+      "source": "",
+      "sourceUrl": "",
+      "observedAt": "YYYY-MM-DDTHH:MM:SSZ"
+    },
+    "quotes": []
+  },
+  "events": []
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Japan–China PC component procurement dashboard with CNY-normalized pricing and dynamic product discovery.">
+  <title>PC Procurement Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">2027 Graduation Build</p>
+        <h1>PC Procurement Dashboard</h1>
+        <p class="subtitle">Compare Japan and China using landed cost in CNY, track product launches, and keep recommendations tied to dated evidence.</p>
+      </div>
+      <div class="actions">
+        <button id="themeButton" type="button">Toggle theme</button>
+        <label class="file-label">Import monthly JSON<input id="importInput" type="file" accept="application/json"></label>
+        <button id="exportButton" type="button">Export data</button>
+      </div>
+    </header>
+
+    <section class="metrics" aria-label="Dashboard summary">
+      <article class="metric"><div class="label">JPY → CNY</div><div class="value" id="fxMetric">—</div><div class="hint" id="fxDate">—</div></article>
+      <article class="metric"><div class="label">Tracked products</div><div class="value" id="productMetric">—</div><div class="hint" id="newProductMetric">—</div></article>
+      <article class="metric"><div class="label">Verified quotes</div><div class="value" id="quoteMetric">—</div><div class="hint" id="freshMetric">—</div></article>
+      <article class="metric"><div class="label">Purchase window</div><div class="value">Mar–Apr 2027</div><div class="hint">Monthly discovery + repricing</div></article>
+    </section>
+
+    <section class="grid">
+      <div>
+        <article class="panel">
+          <div class="panel-head">
+            <h2>Dynamic candidate catalog</h2>
+            <span class="pill" id="resultCount">0 products</span>
+          </div>
+          <div class="controls">
+            <label class="control">Search<input id="searchInput" type="search" placeholder="Model, brand, tag…"></label>
+            <label class="control">Category<select id="categorySelect"><option value="all">All</option></select></label>
+            <label class="control">Status<select id="statusSelect"><option value="all">All</option><option value="new">New</option><option value="active">Active</option><option value="watch">Watch</option><option value="retired">Retired</option></select></label>
+            <label class="control">Sort<select id="sortSelect"><option value="fit-desc">Fit score</option><option value="price-asc">Best verified price</option><option value="release-desc">Newest</option><option value="model-asc">Model A–Z</option></select></label>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Candidate</th><th>Fit</th><th>Best verified price</th><th>Recommended channel</th><th>Evidence</th><th>Basket</th></tr></thead>
+              <tbody id="productRows"></tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head"><h2>Verified retailer quotes</h2><span class="pill warn">Missing data stays missing</span></div>
+          <div class="quote-grid" id="quoteGrid"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head"><h2>New-product and market radar</h2><span class="pill">Monthly discovery layer</span></div>
+          <div class="list" id="eventList"></div>
+        </article>
+      </div>
+
+      <aside>
+        <article class="panel">
+          <h2>Scenario controls</h2>
+          <div class="budget-row">
+            <label class="control">Build budget (CNY)<input id="budgetRange" type="range" min="8000" max="30000" step="500"></label>
+            <div class="range-value" id="budgetValue">—</div>
+          </div>
+          <label class="control" style="display:block;margin-top:12px">FX override: 1 JPY in CNY<input id="fxOverride" type="number" step="0.000001" min="0.001"></label>
+          <div class="progress"><span id="budgetProgress"></span></div>
+          <p class="sub" id="basketSummary">No components selected.</p>
+          <button id="clearBasket" type="button">Clear basket</button>
+          <div class="callout"><strong id="decisionTitle">Decision posture</strong><span id="decisionText">Prioritize flexible architecture now; delay irreversible SKU choices until pricing is verified.</span></div>
+        </article>
+
+        <article class="panel">
+          <h2>Selected build basket</h2>
+          <div class="list" id="basketList"></div>
+        </article>
+
+        <article class="panel">
+          <h2>Procurement rules</h2>
+          <div class="list" id="ruleList"></div>
+        </article>
+
+        <article class="panel">
+          <h2>Data status</h2>
+          <div class="list" id="dataStatus"></div>
+          <p class="footer-note">Retailer pages frequently hide coupon or checkout pricing. A monthly update should record list price, checkout price, stock, date and source separately.</p>
+        </article>
+      </aside>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="data-bundle.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

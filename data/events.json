@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "events": [
+    {
+      "date": "2026-07-31",
+      "type": "market-risk",
+      "title": "China RTX 50 board pricing moved sharply higher",
+      "detail": "Recent distributor-list changes indicate severe volatility; do not assume China is automatically cheaper for GPUs.",
+      "sourceUrl": "https://www.tomshardware.com/pc-components/gpus/msi-and-colorful-raise-nvidia-rtx-50-series-prices-in-china-by-up-to-59-percent-across-the-entire-lineup-change-in-distributer-pricing-suggests-gpu-price-hikes-are-on-the-way"
+    },
+    {
+      "date": "2026-07-15",
+      "type": "new-product",
+      "title": "GeForce RTX 5050 entered the lower end of the RTX 50 family",
+      "detail": "The candidate universe must be refreshed monthly rather than hard-coded around 5060/5070-class cards.",
+      "sourceUrl": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/"
+    },
+    {
+      "date": "2026-04-22",
+      "type": "new-product",
+      "title": "AMD launched Ryzen 9 9950X3D2 Dual Edition",
+      "detail": "Not a default recommendation for this build, but confirms that the Ryzen 9000 desktop catalog is still evolving.",
+      "sourceUrl": "https://www.amd.com/en/newsroom/press-releases/2026-4-22-amd-launches-ryzen-9-9950x3d2-dual-edition-processor.html"
+    },
+    {
+      "date": "2026-03-02",
+      "type": "new-platform",
+      "title": "AMD expanded Ryzen AI 400 to desktop OEM systems",
+      "detail": "Track whether retail DIY variants or compelling small-form-factor systems alter the desktop-vs-laptop decision.",
+      "sourceUrl": "https://www.amd.com/en/newsroom/press-releases/2026-3-2-amd-gives-consumers-and-businesses-more-ai-pc-opti.html"
+    },
+    {
+      "date": "2026-01-01",
+      "type": "new-product",
+      "title": "Intel added Core Ultra 270K Plus and 250K/KF Plus desktop processors",
+      "detail": "Monthly discovery must monitor both new SKUs and platform-level value changes.",
+      "sourceUrl": "https://www.intel.com/content/www/us/en/support/articles/000099656/processors.html"
+    }
+  ]
+}

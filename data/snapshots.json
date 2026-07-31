@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "snapshots": [
+    {
+      "date": "2026-07-27",
+      "fx": {
+        "JPY_CNY": 0.041018,
+        "source": "OFX mid-market rate",
+        "sourceUrl": "https://www.ofx.com/en-us/exchange-rates/jpy-to-cny/",
+        "observedAt": "2026-07-27T06:30:00Z"
+      },
+      "quotes": [
+        {
+          "productId": "cpu-amd-ryzen-7-9700x",
+          "country": "Japan",
+          "platform": "Kakaku.com / PC-IDEA",
+          "currency": "JPY",
+          "listedPrice": 38980,
+          "checkoutPrice": 38980,
+          "shipping": 0,
+          "taxIncluded": true,
+          "stock": "in-stock",
+          "sourceUrl": "https://kakaku.com/item/K0001630332/",
+          "verifiedAt": "2026-07-28",
+          "quality": "verified"
+        },
+        {
+          "productId": "cpu-amd-ryzen-7-9700x",
+          "country": "Japan",
+          "platform": "Amazon.co.jp",
+          "currency": "JPY",
+          "listedPrice": 41675,
+          "checkoutPrice": 41675,
+          "shipping": 0,
+          "taxIncluded": true,
+          "stock": "observed",
+          "sourceUrl": "https://search.kakaku.com/Ryzen%207%209700X%20cpu/",
+          "verifiedAt": "2026-07-28",
+          "quality": "aggregator-observed"
+        },
+        {
+          "productId": "gpu-nvidia-rtx-5070-12gb",
+          "country": "Japan",
+          "platform": "Kakaku.com / MSI Ventus 2X OC",
+          "currency": "JPY",
+          "listedPrice": 95985,
+          "checkoutPrice": 95985,
+          "shipping": 0,
+          "taxIncluded": true,
+          "stock": "observed",
+          "sourceUrl": "https://search.kakaku.com/Rtx5070/",
+          "verifiedAt": "2026-07-01",
+          "quality": "aggregator-observed"
+        }
+      ]
+    }
+  ]
+}

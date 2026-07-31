@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "profile": {
+    "targetPurchaseWindow": "2027-03 to 2027-04",
+    "defaultBudgetCNY": 15000,
+    "useCases": ["AAA gaming", "Python development", "MATLAB", "personal projects"],
+    "targetLifetimeYears": 6,
+    "preferredStrategy": "Mixed procurement between Japan and China"
+  },
+  "rules": [
+    {
+      "id": "landed-cost",
+      "title": "Compare landed cost, not sticker price",
+      "detail": "Include exchange rate, checkout discounts, shipping, tax, baggage or forwarding cost and realistic warranty return cost."
+    },
+    {
+      "id": "dynamic-catalog",
+      "title": "Discover products before repricing",
+      "detail": "Every monthly cycle adds new releases, flags discontinued products and avoids a frozen model list."
+    },
+    {
+      "id": "warranty-weight",
+      "title": "Weight warranty by failure impact",
+      "detail": "PSU, motherboard, GPU and display receive a larger local-warranty penalty than CPU, RAM or air cooling."
+    },
+    {
+      "id": "no-fake-price",
+      "title": "Missing price is not zero",
+      "detail": "A retailer quote appears only when source, date, stock and price type are recorded."
+    }
+  ]
+}
