@@ -1,0 +1,49 @@
+name: Sync procurement market data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 0 1 * *"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out dashboard
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download latest public data source
+        run: |
+          mkdir -p data scripts
+          base="https://raw.githubusercontent.com/Kouki3547/pc-procurement-data/main"
+          curl -fsSL "$base/data/catalog.json" -o data/catalog.json
+          curl -fsSL "$base/data/snapshots.json" -o data/snapshots.json
+          curl -fsSL "$base/data/events.json" -o data/events.json
+          curl -fsSL "$base/data/market.json" -o data/market.json
+          curl -fsSL "$base/scripts/validate_data.py" -o scripts/validate_data.py
+          curl -fsSL "$base/scripts/build_data_bundle.py" -o scripts/build_data_bundle.py
+
+      - name: Validate and rebuild browser bundle
+        run: |
+          python scripts/validate_data.py
+          python scripts/build_data_bundle.py
+
+      - name: Commit updated dashboard data
+        run: |
+          if git diff --quiet; then
+            echo "No market-data changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data data-bundle.js scripts
+          git commit -m "Sync monthly procurement market data"
+          git push
