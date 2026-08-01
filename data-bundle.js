@@ -43,15 +43,51 @@ window.PC_PROCUREMENT_DATA = {
         "brand": "AMD",
         "model": "Ryzen 7 9850X3D",
         "platform": "AM5",
-        "status": "new",
+        "status": "active",
         "releaseDate": "2026-01-01",
-        "specSummary": "8C/16T, up to 5.6 GHz, 3D V-Cache, 120 W",
+        "specSummary": "8C/16T, Zen 5, 3D V-Cache, up to 5.6 GHz, 120 W",
         "tags": [
           "gaming",
-          "new-product"
+          "premium"
         ],
-        "fitScore": 80,
-        "fitReason": "Track pricing, but avoid paying a launch premium unless performance-per-yuan is compelling.",
+        "fitScore": 81,
+        "fitReason": "Track the premium against the 9800X3D; the faster model is only compelling if its price gap stays modest.",
+        "officialUrl": "https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-7-9850x3d.html"
+      },
+      {
+        "id": "cpu-amd-ryzen-9-9950x3d2",
+        "category": "CPU",
+        "brand": "AMD",
+        "model": "Ryzen 9 9950X3D2 Dual Edition",
+        "platform": "AM5",
+        "status": "active",
+        "releaseDate": "2026-04-22",
+        "specSummary": "16C/32T, Zen 5, dual 3D V-Cache, 208 MB total cache, 200 W",
+        "tags": [
+          "creator",
+          "simulation",
+          "premium"
+        ],
+        "fitScore": 74,
+        "fitReason": "Exceptional compile and simulation capability, but far beyond the rational budget tier unless research workloads justify it.",
+        "officialUrl": "https://www.amd.com/en/products/processors/desktops/ryzen/9000-series/amd-ryzen-9-9950x3d2-dual-edition.html"
+      },
+      {
+        "id": "cpu-amd-ryzen-5-9500f",
+        "category": "CPU",
+        "brand": "AMD",
+        "model": "Ryzen 5 9500F",
+        "platform": "AM5",
+        "status": "watch",
+        "releaseDate": null,
+        "specSummary": "6C/12T, Zen 5, up to 5.0 GHz, 65 W, discrete GPU required",
+        "tags": [
+          "budget",
+          "am5",
+          "value"
+        ],
+        "fitScore": 83,
+        "fitReason": "Useful low-cost AM5 entry point if the savings can be redirected to the GPU without compromising motherboard quality.",
         "officialUrl": "https://www.amd.com/en/products/processors/desktops/ryzen.html"
       },
       {
@@ -60,16 +96,34 @@ window.PC_PROCUREMENT_DATA = {
         "brand": "Intel",
         "model": "Core Ultra 7 270K Plus",
         "platform": "LGA1851",
-        "status": "new",
-        "releaseDate": "2026-01-01",
-        "specSummary": "24 cores, up to 5.5 GHz, integrated graphics",
+        "status": "active",
+        "releaseDate": "2026-03-26",
+        "specSummary": "24 cores (8P+16E), up to 5.5 GHz, integrated graphics",
         "tags": [
           "productivity",
-          "new-product"
+          "comparison"
         ],
         "fitScore": 73,
-        "fitReason": "Useful comparison point, but platform longevity and total board cost must beat AM5.",
-        "officialUrl": "https://www.intel.com/content/www/us/en/support/articles/000099656/processors.html"
+        "fitReason": "Useful comparison point, but platform longevity and total motherboard cost must beat AM5.",
+        "officialUrl": "https://newsroom.intel.com/client-computing/intel-announces-new-intel-core-ultra-200s-plus-series-desktop-processors"
+      },
+      {
+        "id": "cpu-intel-core-ultra-5-250k-plus",
+        "category": "CPU",
+        "brand": "Intel",
+        "model": "Core Ultra 5 250K Plus",
+        "platform": "LGA1851",
+        "status": "active",
+        "releaseDate": "2026-03-26",
+        "specSummary": "18 cores (6P+12E), DDR5-7200 support, integrated graphics",
+        "tags": [
+          "midrange",
+          "productivity",
+          "comparison"
+        ],
+        "fitScore": 76,
+        "fitReason": "A midrange Intel reference point; compare total platform cost and application performance against Ryzen 7 options.",
+        "officialUrl": "https://newsroom.intel.com/client-computing/intel-announces-new-intel-core-ultra-200s-plus-series-desktop-processors"
       },
       {
         "id": "gpu-nvidia-rtx-5070-12gb",
@@ -123,7 +177,7 @@ window.PC_PROCUREMENT_DATA = {
           "16gb"
         ],
         "fitScore": 87,
-        "fitReason": "Potentially the rational fallback if 5070-class pricing remains distorted.",
+        "fitReason": "Potentially the rational fallback if RTX 5070-class pricing remains distorted.",
         "officialUrl": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/"
       },
       {
@@ -143,6 +197,24 @@ window.PC_PROCUREMENT_DATA = {
         "fitScore": 82,
         "fitReason": "Strong VRAM and raster alternative; compare software compatibility with CUDA needs.",
         "officialUrl": "https://www.amd.com/en/products/graphics/desktops/radeon/9000-series/amd-radeon-rx-9070.html"
+      },
+      {
+        "id": "gpu-amd-rx-9050",
+        "category": "GPU",
+        "brand": "AMD",
+        "model": "Radeon RX 9050",
+        "platform": "PCIe",
+        "status": "new",
+        "releaseDate": "2026-07-28",
+        "specSummary": "Entry-level Radeon product; official driver support added in Adrenalin 26.7.1, retail specifications not yet verified",
+        "tags": [
+          "entry-level",
+          "new-product",
+          "watch"
+        ],
+        "fitScore": 40,
+        "fitReason": "Track as a market signal rather than a recommendation until official retail specifications, memory capacity and pricing are verified.",
+        "officialUrl": "https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-26-7-1.html"
       },
       {
         "id": "motherboard-gigabyte-b850-aorus-elite-wifi7",
@@ -176,7 +248,7 @@ window.PC_PROCUREMENT_DATA = {
           "upgrade-later"
         ],
         "fitScore": 93,
-        "fitReason": "Start at 32 GB; preserve two free DIMM slots only if board topology and stability support it.",
+        "fitReason": "Start at 32 GB; preserve two free DIMM slots only if motherboard topology and stability support it.",
         "officialUrl": null
       },
       {
@@ -205,7 +277,7 @@ window.PC_PROCUREMENT_DATA = {
         "platform": "ATX 3.1",
         "status": "watch",
         "releaseDate": null,
-        "specSummary": "Native 12V-2x6, 80 Plus Gold, 10-year-class warranty preferred",
+        "specSummary": "Native 12V-2x6, 80 Plus/Cybenetics Gold-class efficiency, long warranty preferred",
         "tags": [
           "buy-in-japan",
           "warranty",
@@ -306,6 +378,67 @@ window.PC_PROCUREMENT_DATA = {
             "quality": "aggregator-observed"
           }
         ]
+      },
+      {
+        "date": "2026-08-01",
+        "fx": {
+          "JPY_CNY": 0.04134,
+          "source": "Wise mid-market rate; latest publicly visible observation available during the August 1 update",
+          "sourceUrl": "https://wise.com/gb/currency-converter/jpy-to-cny-rate/history",
+          "observedAt": "2026-07-28T00:00:00Z"
+        },
+        "quotes": [
+          {
+            "productId": "cpu-amd-ryzen-7-9700x",
+            "country": "Japan",
+            "platform": "価格.com",
+            "listingTitle": "AMD Ryzen 7 9700X BOX",
+            "currency": "JPY",
+            "listedPrice": 38980,
+            "checkoutPrice": 38980,
+            "shipping": 0,
+            "taxIncluded": true,
+            "stock": "observed",
+            "sourceUrl": "https://kakaku.com/item/K0001630332/",
+            "verifiedAt": "2026-08-01",
+            "quality": "aggregator-observed"
+          },
+          {
+            "productId": "cpu-amd-ryzen-7-9800x3d",
+            "country": "Japan",
+            "platform": "価格.com / らいぶshop",
+            "listingTitle": "AMD Ryzen 7 9800X3D BOX",
+            "currency": "JPY",
+            "listedPrice": 59962,
+            "checkoutPrice": 59962,
+            "shipping": 0,
+            "taxIncluded": true,
+            "stock": "in-stock",
+            "sourceUrl": "https://kakaku.com/item/K0001661801/",
+            "verifiedAt": "2026-08-01",
+            "quality": "aggregator-observed"
+          },
+          {
+            "productId": "gpu-amd-rx-9070-16gb",
+            "country": "Japan",
+            "platform": "価格.com",
+            "listingTitle": "PowerColor Hellhound AMD Radeon RX 9070 16GB GDDR6 RX9070 16G-L/OC",
+            "currency": "JPY",
+            "listedPrice": 89800,
+            "checkoutPrice": 89800,
+            "shipping": 0,
+            "taxIncluded": true,
+            "stock": "observed",
+            "sourceUrl": "https://kakaku.com/item/K0001680193/",
+            "verifiedAt": "2026-08-01",
+            "quality": "aggregator-observed"
+          }
+        ],
+        "coverageNotes": [
+          "Amazon.co.jp, TSUKUMO, DOSPARA and PC Koubou pages did not expose enough stable, directly comparable public checkout data for the selected SKUs during this run.",
+          "JD.com and Tmall product pages were discoverable, but publicly retrievable pages did not expose reliable numeric checkout prices; Chinese prices remain intentionally absent.",
+          "The FX value is the latest publicly visible mid-market observation found during the August 1 run, with its original observation time preserved."
+        ]
       }
     ]
   },
@@ -313,39 +446,46 @@ window.PC_PROCUREMENT_DATA = {
     "schemaVersion": 1,
     "events": [
       {
-        "date": "2026-07-31",
-        "type": "market-risk",
-        "title": "China RTX 50 board pricing moved sharply higher",
-        "detail": "Recent distributor-list changes indicate severe volatility; do not assume China is automatically cheaper for GPUs.",
-        "sourceUrl": "https://www.tomshardware.com/pc-components/gpus/msi-and-colorful-raise-nvidia-rtx-50-series-prices-in-china-by-up-to-59-percent-across-the-entire-lineup-change-in-distributer-pricing-suggests-gpu-price-hikes-are-on-the-way"
+        "date": "2026-08-01",
+        "type": "monthly-update",
+        "title": "August 2026 market refresh completed",
+        "detail": "The candidate catalog was expanded and corrected, a new dated Japanese price snapshot was added, and unverifiable Chinese checkout prices were intentionally left missing.",
+        "sourceUrl": "https://github.com/Kouki3547/pc-procurement-data"
       },
       {
-        "date": "2026-07-15",
+        "date": "2026-07-28",
         "type": "new-product",
-        "title": "GeForce RTX 5050 entered the lower end of the RTX 50 family",
-        "detail": "The candidate universe must be refreshed monthly rather than hard-coded around 5060/5070-class cards.",
-        "sourceUrl": "https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/"
+        "title": "AMD added Radeon RX 9050 support in Adrenalin 26.7.1",
+        "detail": "The product is now tracked as a new entry-level market signal, but retail specifications and pricing remain insufficiently verified for a purchase recommendation.",
+        "sourceUrl": "https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-26-7-1.html"
+      },
+      {
+        "date": "2026-07-31",
+        "type": "market-risk",
+        "title": "Yen volatility increased after intervention-related moves",
+        "detail": "The yen moved sharply around reported intervention activity, reinforcing the need to preserve the exact observation time for every JPY/CNY conversion instead of treating one monthly rate as timeless.",
+        "sourceUrl": "https://www.reuters.com/world/asia-pacific/history-japans-intervention-currency-markets-2026-07-31/"
       },
       {
         "date": "2026-04-22",
         "type": "new-product",
         "title": "AMD launched Ryzen 9 9950X3D2 Dual Edition",
-        "detail": "Not a default recommendation for this build, but confirms that the Ryzen 9000 desktop catalog is still evolving.",
+        "detail": "The dual-cache flagship is now included as a high-end simulation and creator reference, not as the default value recommendation.",
         "sourceUrl": "https://www.amd.com/en/newsroom/press-releases/2026-4-22-amd-launches-ryzen-9-9950x3d2-dual-edition-processor.html"
+      },
+      {
+        "date": "2026-03-26",
+        "type": "new-platform",
+        "title": "Intel Core Ultra 200S Plus desktop processors became available",
+        "detail": "Core Ultra 7 270K Plus and Core Ultra 5 250K Plus are now active comparison points for total platform cost and productivity performance.",
+        "sourceUrl": "https://newsroom.intel.com/client-computing/intel-announces-new-intel-core-ultra-200s-plus-series-desktop-processors"
       },
       {
         "date": "2026-03-02",
         "type": "new-platform",
         "title": "AMD expanded Ryzen AI 400 to desktop OEM systems",
-        "detail": "Track whether retail DIY variants or compelling small-form-factor systems alter the desktop-vs-laptop decision.",
+        "detail": "Track whether retail DIY variants or compelling small-form-factor systems alter the desktop-versus-laptop decision.",
         "sourceUrl": "https://www.amd.com/en/newsroom/press-releases/2026-3-2-amd-gives-consumers-and-businesses-more-ai-pc-opti.html"
-      },
-      {
-        "date": "2026-01-01",
-        "type": "new-product",
-        "title": "Intel added Core Ultra 270K Plus and 250K/KF Plus desktop processors",
-        "detail": "Monthly discovery must monitor both new SKUs and platform-level value changes.",
-        "sourceUrl": "https://www.intel.com/content/www/us/en/support/articles/000099656/processors.html"
       }
     ]
   },

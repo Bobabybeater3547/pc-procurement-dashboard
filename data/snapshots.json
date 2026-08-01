@@ -53,6 +53,67 @@
           "quality": "aggregator-observed"
         }
       ]
+    },
+    {
+      "date": "2026-08-01",
+      "fx": {
+        "JPY_CNY": 0.04134,
+        "source": "Wise mid-market rate; latest publicly visible observation available during the August 1 update",
+        "sourceUrl": "https://wise.com/gb/currency-converter/jpy-to-cny-rate/history",
+        "observedAt": "2026-07-28T00:00:00Z"
+      },
+      "quotes": [
+        {
+          "productId": "cpu-amd-ryzen-7-9700x",
+          "country": "Japan",
+          "platform": "価格.com",
+          "listingTitle": "AMD Ryzen 7 9700X BOX",
+          "currency": "JPY",
+          "listedPrice": 38980,
+          "checkoutPrice": 38980,
+          "shipping": 0,
+          "taxIncluded": true,
+          "stock": "observed",
+          "sourceUrl": "https://kakaku.com/item/K0001630332/",
+          "verifiedAt": "2026-08-01",
+          "quality": "aggregator-observed"
+        },
+        {
+          "productId": "cpu-amd-ryzen-7-9800x3d",
+          "country": "Japan",
+          "platform": "価格.com / らいぶshop",
+          "listingTitle": "AMD Ryzen 7 9800X3D BOX",
+          "currency": "JPY",
+          "listedPrice": 59962,
+          "checkoutPrice": 59962,
+          "shipping": 0,
+          "taxIncluded": true,
+          "stock": "in-stock",
+          "sourceUrl": "https://kakaku.com/item/K0001661801/",
+          "verifiedAt": "2026-08-01",
+          "quality": "aggregator-observed"
+        },
+        {
+          "productId": "gpu-amd-rx-9070-16gb",
+          "country": "Japan",
+          "platform": "価格.com",
+          "listingTitle": "PowerColor Hellhound AMD Radeon RX 9070 16GB GDDR6 RX9070 16G-L/OC",
+          "currency": "JPY",
+          "listedPrice": 89800,
+          "checkoutPrice": 89800,
+          "shipping": 0,
+          "taxIncluded": true,
+          "stock": "observed",
+          "sourceUrl": "https://kakaku.com/item/K0001680193/",
+          "verifiedAt": "2026-08-01",
+          "quality": "aggregator-observed"
+        }
+      ],
+      "coverageNotes": [
+        "Amazon.co.jp, TSUKUMO, DOSPARA and PC Koubou pages did not expose enough stable, directly comparable public checkout data for the selected SKUs during this run.",
+        "JD.com and Tmall product pages were discoverable, but publicly retrievable pages did not expose reliable numeric checkout prices; Chinese prices remain intentionally absent.",
+        "The FX value is the latest publicly visible mid-market observation found during the August 1 run, with its original observation time preserved."
+      ]
     }
   ]
 }
