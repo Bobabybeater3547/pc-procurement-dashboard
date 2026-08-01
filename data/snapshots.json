@@ -107,11 +107,31 @@
           "sourceUrl": "https://kakaku.com/item/K0001680193/",
           "verifiedAt": "2026-08-01",
           "quality": "aggregator-observed"
+        },
+        {
+          "productId": "cpu-amd-ryzen-7-9700x",
+          "country": "China",
+          "platform": "京东",
+          "listingTitle": "锐龙 7 9700X",
+          "currency": "CNY",
+          "listedPrice": 1899,
+          "couponPrice": null,
+          "checkoutPrice": 1899,
+          "shipping": 0,
+          "taxIncluded": true,
+          "stock": "personal-observed",
+          "sourceUrl": "https://3.cn/2X-Abfgk?jkl=@IAxtV9LxcHt@CA8680",
+          "verifiedAt": "2026-08-01",
+          "quality": "personal-checkout",
+          "shopName": "AMD官方旗舰店",
+          "channelType": "官方旗舰店",
+          "notes": null,
+          "submissionIssue": "https://github.com/Kouki3547/pc-procurement-data/issues/1"
         }
       ],
       "coverageNotes": [
         "Amazon.co.jp, TSUKUMO, DOSPARA and PC Koubou pages did not expose enough stable, directly comparable public checkout data for the selected SKUs during this run.",
-        "JD.com and Tmall product pages were discoverable, but publicly retrievable pages did not expose reliable numeric checkout prices; Chinese prices remain intentionally absent.",
+        "JD.com and Tmall public pages did not expose reliable checkout prices; manually submitted personal-checkout prices are stored separately with their own quality label.",
         "The FX value is the latest publicly visible mid-market observation found during the August 1 run, with its original observation time preserved."
       ]
     }
