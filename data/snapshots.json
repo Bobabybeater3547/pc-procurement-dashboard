@@ -127,6 +127,26 @@
           "channelType": "官方旗舰店",
           "notes": null,
           "submissionIssue": "https://github.com/Kouki3547/pc-procurement-data/issues/1"
+        },
+        {
+          "productId": "cpu-amd-ryzen-7-9700x",
+          "country": "China",
+          "platform": "京东",
+          "listingTitle": "AMD锐龙 7 9700X处理器",
+          "currency": "CNY",
+          "listedPrice": 2598,
+          "couponPrice": null,
+          "checkoutPrice": 1729,
+          "shipping": 0,
+          "taxIncluded": true,
+          "stock": "personal-observed",
+          "sourceUrl": "https://3.cn/-2XArPDR?jkl=@MC5789IFG4Q@MF8555",
+          "verifiedAt": "2026-08-01",
+          "quality": "personal-checkout",
+          "shopName": "AMD京东自营旗舰店",
+          "channelType": "京东自营",
+          "notes": null,
+          "submissionIssue": "https://github.com/Kouki3547/pc-procurement-data/issues/2"
         }
       ],
       "coverageNotes": [
