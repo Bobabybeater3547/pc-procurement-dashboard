@@ -12,8 +12,10 @@ DATA_DIR = ROOT / "data"
 OUT = ROOT / "data-bundle.js"
 LOCAL_RUNTIME = ROOT / "dashboard" / "runtime.js"
 LOCAL_MANUAL_ENTRY = ROOT / "dashboard" / "manual-entry.js"
+LOCAL_LIVE_REFRESH = ROOT / "dashboard" / "live-refresh.js"
 REMOTE_RUNTIME = "https://raw.githubusercontent.com/Kouki3547/pc-procurement-data/main/dashboard/runtime.js"
 REMOTE_MANUAL_ENTRY = "https://raw.githubusercontent.com/Kouki3547/pc-procurement-data/main/dashboard/manual-entry.js"
+REMOTE_LIVE_REFRESH = "https://raw.githubusercontent.com/Kouki3547/pc-procurement-data/main/dashboard/live-refresh.js"
 
 
 def load(name: str) -> dict:
@@ -50,9 +52,12 @@ def main() -> None:
     }
     runtime = load_script(LOCAL_RUNTIME, REMOTE_RUNTIME)
     manual_entry = load_script(LOCAL_MANUAL_ENTRY, REMOTE_MANUAL_ENTRY)
+    live_refresh = load_script(LOCAL_LIVE_REFRESH, REMOTE_LIVE_REFRESH)
 
     if "priceEntryButton" not in manual_entry and "manualPriceButton" not in manual_entry:
         raise RuntimeError("Manual price-entry UI marker missing from dashboard/manual-entry.js")
+    if "refreshDataButton" not in live_refresh:
+        raise RuntimeError("Live refresh marker missing from dashboard/live-refresh.js")
 
     bundle = (
         "window.PC_PROCUREMENT_DATA = "
@@ -61,14 +66,18 @@ def main() -> None:
         + runtime
         + "\n\n"
         + manual_entry
+        + "\n\n"
+        + live_refresh
         + "\n"
     )
 
     if "录入价格" not in bundle:
         raise RuntimeError("Generated data-bundle.js does not contain the manual price-entry UI")
+    if "刷新数据" not in bundle:
+        raise RuntimeError("Generated data-bundle.js does not contain the live refresh UI")
 
     OUT.write_text(bundle, encoding="utf-8")
-    print(f"Wrote {OUT} with manual price-entry UI")
+    print(f"Wrote {OUT} with manual price entry and live refresh")
 
 
 if __name__ == "__main__":
