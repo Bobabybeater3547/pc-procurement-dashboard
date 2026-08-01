@@ -10,7 +10,9 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 OUT = ROOT / "data-bundle.js"
 LOCAL_RUNTIME = ROOT / "dashboard" / "runtime.js"
+LOCAL_MANUAL_ENTRY = ROOT / "dashboard" / "manual-entry.js"
 REMOTE_RUNTIME = "https://raw.githubusercontent.com/Kouki3547/pc-procurement-data/main/dashboard/runtime.js"
+REMOTE_MANUAL_ENTRY = "https://raw.githubusercontent.com/Kouki3547/pc-procurement-data/main/dashboard/manual-entry.js"
 
 
 def load(name: str) -> dict:
@@ -18,10 +20,10 @@ def load(name: str) -> dict:
         return json.load(file)
 
 
-def load_runtime() -> str:
-    if LOCAL_RUNTIME.exists():
-        return LOCAL_RUNTIME.read_text(encoding="utf-8")
-    with urlopen(REMOTE_RUNTIME, timeout=30) as response:  # noqa: S310
+def load_script(local_path: Path, remote_url: str) -> str:
+    if local_path.exists():
+        return local_path.read_text(encoding="utf-8")
+    with urlopen(remote_url, timeout=30) as response:  # noqa: S310
         return response.read().decode("utf-8")
 
 
@@ -36,7 +38,9 @@ def main() -> None:
         "window.PC_PROCUREMENT_DATA = "
         + json.dumps(payload, ensure_ascii=False, indent=2)
         + ";\n\n"
-        + load_runtime()
+        + load_script(LOCAL_RUNTIME, REMOTE_RUNTIME)
+        + "\n\n"
+        + load_script(LOCAL_MANUAL_ENTRY, REMOTE_MANUAL_ENTRY)
         + "\n"
     )
     OUT.write_text(bundle, encoding="utf-8")
